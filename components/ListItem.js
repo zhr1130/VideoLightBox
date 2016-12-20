@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { View, Image, Text, TouchableOpacity } from 'react-native';
+import convertVideoRuntime from '../utils/convertVideoRuntime';
 
 class ListItem extends Component {
     render() {
@@ -10,7 +11,7 @@ class ListItem extends Component {
                     <View style={{flexDirection: 'column'}}>
                         <Text>{this.props.item.metadata.title}</Text>
                         <Text>By {this.props.item.metadata.vendorName}</Text>
-                        <Text>{this.props.item.metadata.runtime}</Text>
+                        <Text>{convertVideoRuntime(this.props.item.metadata.runtime)}</Text>
                     </View>
                 </View>
             </TouchableOpacity>
