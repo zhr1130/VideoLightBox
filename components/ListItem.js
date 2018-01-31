@@ -19,7 +19,7 @@ class ListItem extends Component {
     }
 
     _onPressButton() {
-        alert(this.props.item.metadata.title);
+      this.props.onClick(this.props.item.id);
     }
 }
 
